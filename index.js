@@ -5,9 +5,10 @@ const csv=require('csvtojson')
  
 var app = express()
 
- 
-app.get('/notes', function(req, res) {
-  res.json({notes: "This is your notebook. Edit this to start saving your notes!"})
+ app.get('/', (request, response) => {
+  response.json({
+    'answer':"Hello, world! I'm working as expected!"
+  })
 })
 
 app.get('/csv', function(req, res) {
